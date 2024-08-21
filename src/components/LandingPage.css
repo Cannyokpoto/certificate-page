@@ -358,7 +358,7 @@
     
     .pageWrapper .result .left{
         width: 100%;
-        height: 60%;
+        height: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
