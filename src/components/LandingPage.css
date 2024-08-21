@@ -215,6 +215,7 @@
         flex-direction: column;
         align-items: center;
         background: url(./../assets/images/bg.jpg);
+        justify-content: flex-start;
         background-size: cover;
         background-repeat: no-repeat;
         background-color: var(--energyWhite);
@@ -248,7 +249,7 @@
     
     .pageWrapper .landing{
         width: 90vw;
-        height: 90vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
