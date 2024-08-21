@@ -12,7 +12,7 @@
     transition: all 0.5s linear;
 }
 
-.pageWrapper{
+.wrapper-bg{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -21,6 +21,16 @@
     background: url(./../assets/images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--energyWhite);
 }
 
 .pageWrapper .header{
@@ -130,7 +140,7 @@
 }
 
 .pageWrapper .result{
-    width: 80vw;
+    width: 90vw;
     height: 65vh;
     display: flex;
     flex-direction: row;
@@ -139,4 +149,259 @@
     background: transparent;
     margin-top: 50px;
     gap: 30px;
+    border: solid 2px grey;
+    padding: 20px 20px;
+}
+
+.pageWrapper .result .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border: dashed;
+    background-color: var(--energyBlue);
+    border-radius: 5px;
+}
+
+.pageWrapper .result .left img{
+    width: 70%;
+    height: 70%;
+}
+
+
+.pageWrapper .result .right{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--energyWhite);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.pageWrapper .result .right .name{
+    width: auto;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--energyBlue);
+}
+
+.pageWrapper .result .right p{
+    font-size: 15px;
+    color: var(--energyBlack);
+    font-weight: 700;
+}
+
+
+@media (max-width: 500px){
+
+
+    .wrapper-bg{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url(./../assets/images/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--energyWhite);
+    }
+    
+    .pageWrapper{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--energyWhite);
+        border: dashed;
+    }
+    
+    .pageWrapper .header{
+        width: 100vw;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--energyWhite);
+        padding: 10px 0;
+    }
+    
+    .pageWrapper .header img{
+        width: 140px;
+        height: 50px;
+    }
+    
+    .pageWrapper .landing{
+        width: 90vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin-top: 0;
+        gap: 20px;
+        border: dashed red;
+    }
+    
+    .pageWrapper .landing .left{
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .pageWrapper .landing .left h1{
+        color: var(--energyWhite);
+        text-align: center;
+        font-weight: 400;
+        font-size: 25px;
+        width: 100%;
+    }
+    
+    .pageWrapper .landing .left h1 span{
+        color: var(--energyWhite);
+        font-weight: 900;
+        font-size: 25px;
+    }
+    
+    .pageWrapper .landing .left p{
+        width: 100%;
+        color: var(--energyWhite);
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    .pageWrapper .landing .right{
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--energyWhite);
+        border-radius: 5px;
+    }
+    
+    .pageWrapper .landing .right p{
+        width: 80%;
+        color: var(--energyBlack);
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .pageWrapper .landing .right input{
+        width: 90%;
+        height: 40px;
+        border-radius: 4px;
+        padding-left: 10px;
+        color: var(--energyWhite);
+        background-color: var(--energyBlack);
+        font-size: 15px;
+    }
+    
+    .pageWrapper .landing .right button{
+        width: 90%;
+        height: 40px;
+        border-radius: 4px;
+        padding-left: 10px;
+        color: var(--energyWhite);
+        background-color: var(--energyBlue);
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .pageWrapper .landing .right button:hover{
+        background-color: rgb(32, 32, 93);
+    }
+    
+    .pageWrapper .result{
+        width: 90vw;
+        height: 65vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin-top: 50px;
+        gap: 30px;
+        border: solid 2px grey;
+        padding: 20px 20px;
+    }
+    
+    .pageWrapper .result .left{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        border: dashed;
+        background-color: var(--energyBlue);
+        border-radius: 5px;
+    }
+    
+    .pageWrapper .result .left img{
+        width: 70%;
+        height: 70%;
+    }
+    
+    
+    .pageWrapper .result .right{
+        width: 40%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        background-color: var(--energyWhite);
+        border-radius: 5px;
+        padding-left: 20px;
+    }
+    
+    .pageWrapper .result .right .name{
+        width: auto;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 20px;
+        font-size: 15px;
+        color: white;
+        background-color: var(--energyBlue);
+    }
+    
+    .pageWrapper .result .right p{
+        font-size: 15px;
+        color: var(--energyBlack);
+        font-weight: 700;
+    }
 }

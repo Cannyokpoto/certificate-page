@@ -39,20 +39,15 @@ function LandingPage() {
       {screen === 'result' ?
       <div className="result">
         <div className="left">
-            <h1>Welcome to 
-                our <span>Certificate
-                Verification Portal</span>
-            </h1>
-
-            <p>All issued certificates by Page Innovations has certificate number for verification by companies. We understand that certificates can be forged and we’ve taken measures to combat that.</p>
+            <img src={PHOTOS.cert} alt="" />
         </div>
 
         <div className="right">
-            <p>You can search to confirm  student's certificate by name or certificate no:</p>
-
-            <input type="text" placeholder='Enter name or cert. no.'/>
-
-            <button>Search</button>
+            <div className="name">Olaleye Babatunde Augustine</div>
+            
+            <p>Course: Data Analytics</p>
+            <p>Cert No: 10002345</p>
+            <p>Issued Date: 21/08/24</p>
         </div>
       </div> : ""}
     </div>
