@@ -385,7 +385,8 @@
         gap: 10px;
         background-color: var(--energyWhite);
         border-radius: 5px;
-        padding-left: 20px;
+        padding-left: 0;
+        border: dashed red;
     }
     
     .pageWrapper .result .right .name{
