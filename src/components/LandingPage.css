@@ -218,6 +218,7 @@
         justify-content: flex-start;
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         background-color: var(--energyWhite);
     }
     
@@ -257,7 +258,6 @@
         background: transparent;
         margin-top: 50px;
         gap: 20px;
-        border: dashed red;
     }
     
     .pageWrapper .landing .left{
@@ -268,7 +268,6 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-        border: dashed;
     }
     
     .pageWrapper .landing .left h1{
@@ -345,9 +344,9 @@
     
     .pageWrapper .result{
         width: 90vw;
-        height: 65vh;
+        height: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         background: transparent;
@@ -358,8 +357,8 @@
     }
     
     .pageWrapper .result .left{
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: 60%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -372,18 +371,18 @@
     
     .pageWrapper .result .left img{
         width: 70%;
-        height: 70%;
+        height: 90%;
     }
     
     
     .pageWrapper .result .right{
-        width: 40%;
-        height: 80%;
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         background-color: var(--energyWhite);
         border-radius: 5px;
         padding-left: 20px;
