@@ -1,0 +1,22 @@
+:root{
+  --energyBlack: #090909;
+  --energyBlue: #10389F;
+  --energyWhite: #FFFFFF;
+  --boxShadow: 5px 5px 5px rgb(178, 180, 182);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden !important;
+}

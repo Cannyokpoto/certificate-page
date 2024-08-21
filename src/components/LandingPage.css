@@ -1,0 +1,142 @@
+:root{
+    --energyBlack: #090909;
+    --energyBlue: #10389F;
+    --energyWhite: #FFFFFF;
+    --boxShadow: 5px 5px 5px rgb(178, 180, 182);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+}
+
+.pageWrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./../assets/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pageWrapper .header{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--energyWhite);
+}
+
+.pageWrapper .header img{
+    width: 140px;
+    height: 50px;
+}
+
+.pageWrapper .landing{
+    width: 80vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.pageWrapper .landing .left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pageWrapper .landing .left h1{
+    color: var(--energyWhite);
+    font-weight: 400;
+    font-size: 30px;
+    width: 95%;
+}
+
+.pageWrapper .landing .left h1 span{
+    color: var(--energyWhite);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.pageWrapper .landing .left p{
+    width: 80%;
+    color: var(--energyWhite);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.pageWrapper .landing .right{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--energyWhite);
+    border-radius: 5px;
+}
+
+.pageWrapper .landing .right p{
+    width: 80%;
+    color: var(--energyBlack);
+    text-align: center;
+    font-size: 15px;
+}
+
+.pageWrapper .landing .right input{
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: var(--energyWhite);
+    background-color: var(--energyBlack);
+    font-size: 15px;
+}
+
+.pageWrapper .landing .right button{
+    width: 90%;
+    height: 40px;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: var(--energyWhite);
+    background-color: var(--energyBlue);
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.pageWrapper .landing .right button:hover{
+    background-color: rgb(32, 32, 93);
+}
+
+.pageWrapper .result{
+    width: 80vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-top: 50px;
+    gap: 30px;
+}
