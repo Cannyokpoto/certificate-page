@@ -1,0 +1,93 @@
+:root{
+    --energyRed: #FF2121;
+    --anotherRed: #ff4949;
+    --energyBlue: #6590ff;
+    --energyDarkRed: #540808;
+    --energyBlack: #000000;
+    --energyDarkBlue: #263640;
+    --energyGrey: #929A9F;
+    --energyLightGrey: #F5F8FA;
+    --energyWhite: #FFFFFF;
+    --energyMl: #F2F2F2;
+    --anotherGrey: #AFAFAF;
+    --secondary: #212529;
+    --boxShadow: 5px 5px 5px rgb(3, 3, 3);
+}
+
+body.active-loading{
+    overflow-y: hidden;
+}
+
+.loading{
+    height: 100vh;
+    width: 100vw;
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--energyDarkBlue);
+    opacity: .8;
+}
+
+.loading span{
+    height: 50px;
+    width: 50px;
+    border: 5px solid #ccc;
+    border-top-color: var(--energyBlue);
+    position: absolute;
+    top: 40vh;
+    left: 49vw;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes rotate{
+    0% { transform: rotate(0)}
+    100% {transform: rotate(360deg)}
+}
+
+.updateBtn{
+    height: 40px;
+    width: auto;
+    border: none;
+    background-color: var(--energyBlue);
+    color: var(--energyWhite);
+    padding: 0 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 500px){
+
+    .loading{
+        height: 100vh;
+        width: 100vw;
+        z-index: 50;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: var(--energyDarkBlue);
+        opacity: .7;
+    }
+    
+    .loading span{
+        height: 50px;
+        width: 50px;
+        border: 5px solid #ccc;
+        border-top-color: var(--energyBlue);
+        position: absolute;
+        top: 40vh;
+        left: 42vw;
+        background-color: transparent;
+        border-radius: 50%;
+        animation: rotate;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+}

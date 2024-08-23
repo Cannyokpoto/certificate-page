@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(./../assets/images/bg.jpg);
+    background: url(./../../assets/images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--energyWhite);
@@ -106,6 +106,11 @@
     width: 80%;
     color: var(--energyBlack);
     text-align: center;
+    font-size: 15px;
+}
+
+.pageWrapper .landing .right .certError{
+    color: red;
     font-size: 15px;
 }
 
@@ -213,7 +218,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: url(./../assets/images/bg.jpg);
+        background: url(./../../assets//images/bg.jpg);
         justify-content: flex-start;
         background-size: cover;
         background-repeat: no-repeat;
