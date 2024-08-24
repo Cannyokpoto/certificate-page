@@ -59,8 +59,6 @@
     cursor: pointer;
 }
 
-
-
 .pageWrapper .landing{
     width: 80vw;
     height: 65vh;
@@ -262,6 +260,15 @@
     .pageWrapper .header img{
         width: 140px;
         height: 50px;
+    }
+
+    .pageWrapper .anotherCert{
+        position: absolute;
+        font-size: 27px;
+        color: var(--energyBlack);
+        left: 5vw;
+        top: 50px;
+        cursor: pointer;
     }
     
     .pageWrapper .landing{
