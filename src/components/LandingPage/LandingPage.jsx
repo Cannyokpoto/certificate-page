@@ -16,6 +16,9 @@ function LandingPage() {
 
   const [student, setStudent] = useState(null);
   console.warn("student:", student)
+  
+  const IssuedOn = student ? student.issued_date.slice(0, 10).split('-') : "";
+  
 
   const [date, setDate] = useState([]);
 
@@ -82,13 +85,13 @@ function LandingPage() {
                     Verification Portal</span>
                 </h1>
 
-                <p>All issued certificates by Page Innovations has certificate number for verification by companies. We understand that certificates can be forged and we’ve taken measures to combat that.</p>
+                <p>All certificates issued by Page Innovations have certificate number for verification by employers. We understand that certificates can be forged and we have taken measures to combat that.</p>
             </div>
 
             <div className="right">
-                <p>You can search to confirm  student's certificate by certificate no:</p>
+                <p>You can search to verify  bearer's certificate by certificate number:</p>
 
-                <input type="number" placeholder='Enter cert. no.' onChange={certNumHandler}/>
+                <input type="number" placeholder='Enter certificate number' onChange={certNumHandler}/>
                 
                 <p className='certError'>{certificateError}</p>
 
@@ -108,7 +111,7 @@ function LandingPage() {
             
             <p>Course: {student.course}</p>
             <p>Cert No: {student.certificate_number}</p>
-            <p>Issued Date: {student.issued_date.slice(0, 10)}</p>
+            <p>Issued Date: {`${IssuedOn[2]}/${IssuedOn[1]}/${IssuedOn[0]}`}</p>
         </div>
       </div> : ""}
     </div>

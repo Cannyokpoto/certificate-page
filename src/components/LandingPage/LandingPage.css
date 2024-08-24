@@ -2,6 +2,7 @@
     --energyBlack: #090909;
     --energyBlue: #10389F;
     --energyWhite: #FFFFFF;
+    --btnColor: #2149ae;
     --boxShadow: 5px 5px 5px rgb(178, 180, 182);
 }
 
@@ -130,7 +131,7 @@
     border-radius: 4px;
     padding-left: 10px;
     color: var(--energyWhite);
-    background-color: var(--energyBlue);
+    background-color: var(--btnColor);
     font-size: 15px;
     display: flex;
     flex-direction: row;
