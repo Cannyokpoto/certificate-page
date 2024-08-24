@@ -3,6 +3,7 @@ import './LandingPage.css';
 import PHOTOS from '../../assets/images';
 import axios from 'axios';
 import Loading from '../Loading/Loading';
+import { GoArrowLeft } from "react-icons/go";
 
 
 function LandingPage() {
@@ -67,7 +68,11 @@ function LandingPage() {
     setCertificateError('Please provide certificate number.');
   }
   
-      
+}
+
+const goBack = ()=>{
+  setScreen('landing');
+  setStudent(null);
 }
 
     
@@ -76,6 +81,10 @@ function LandingPage() {
       <header className='header'>
         <img src={PHOTOS.LOGO} alt="" />
       </header>
+
+      {student !==null && screen === 'result' ?
+        <GoArrowLeft className='anotherCert' onClick={goBack}/>
+        : ""}
 
         {screen === 'landing' && student ==null ?
         <div className="landing">
@@ -102,6 +111,7 @@ function LandingPage() {
 
       {student !==null && screen === 'result' ?
       <div className="result">
+        
         <div className="left">
             <img src={`https://server.handiwork.com.ng/${student.certificate_file_path}`} alt="" />
         </div>
