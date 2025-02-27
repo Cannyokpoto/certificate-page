@@ -13,43 +13,44 @@ function LandingPage() {
         setScreen('result')
     }
 
+
+    // const url = "https://certificate-server-2qyt.onrender.com/"
+    const url = "http://127.0.0.1:8000/"
+    // const url = "https://server.handiwork.com.ng/api/certificates/number/${certificateNumber}"
+
   //To view a single customer 
 
   const [student, setStudent] = useState(null);
-  console.warn("student:", student)
-  
-  const IssuedOn = student ? student.issued_date.slice(0, 10).split('-') : "";
-  
-
-  const [date, setDate] = useState([]);
+  console.log("student:", student)  
 
   const [certificateError, setCertificateError] = useState('');
-  console.warn("certificateError:", certificateError)
+  console.log("certificateError:", certificateError)
 
   const [certificateNumber, setCertificateNumber] = useState('');
   const certNumHandler = (event) =>{
     setCertificateNumber(event.target.value)
     setCertificateError('')
   }
-  console.warn("certificateNumber:", certificateNumber)
+  console.log("certificateNumber:", certificateNumber)
 
 
   async function viewCertificate(){
-    const url = `https://server.handiwork.com.ng/api/certificates/number/${certificateNumber}`
 
     if(certificateNumber.length > 0 && certificateNumber.length === 6){
 
       try {  
         setLoading(true)
-        const response = await axios.get(url)
+        const response = await axios.post(`${url}api/certificate/verify`, {
+          certificateNumber: certificateNumber
+        })
   
-        setStudent(response.data.certificate);
+        setStudent(response.data.data.certificate);
         handleScreen()
         
         
     }catch(dupError) {
-        console.warn("dupError:", dupError.response.data.error)
-        setCertificateError(dupError.response.data.error)
+        console.log("dupError:", dupError.response.data.message)
+        setCertificateError(dupError.response.data.message)
     }finally{
       setLoading(false)
     }
@@ -112,16 +113,17 @@ const goBack = ()=>{
       {student !==null && screen === 'result' ?
       <div className="result">
         
+        
         <div className="left">
-            <img src={`https://server.handiwork.com.ng/${student.certificate_file_path}`} alt="" />
+            <img src={student && student.certificateImages[0]} alt="certificate" />
         </div>
 
         <div className="right">
-            <div className="name">{student.student_name}</div>
+            <div className="name">{student.name}</div>
             
             <p>Course: {student.course}</p>
-            <p>Cert No: {student.certificate_number}</p>
-            <p>Issued Date: {`${IssuedOn[2]}/${IssuedOn[1]}/${IssuedOn[0]}`}</p>
+            <p>Cert No: {student.certificateNumber}</p>
+            <p>Issued Date: {student.issuedDate}</p>
         </div>
       </div> : ""}
     </div>
