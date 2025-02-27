@@ -14,8 +14,8 @@ function LandingPage() {
     }
 
 
-    // const url = "https://certificate-server-2qyt.onrender.com/"
-    const url = "http://127.0.0.1:8000/"
+    const url = "https://certificate-server-2qyt.onrender.com/"
+    // const url = "http://127.0.0.1:8000/"
     // const url = "https://server.handiwork.com.ng/api/certificates/number/${certificateNumber}"
 
   //To view a single customer 
