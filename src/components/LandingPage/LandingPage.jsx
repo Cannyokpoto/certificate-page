@@ -14,7 +14,8 @@ function LandingPage() {
     }
 
 
-    const url = "https://certificate-server-2qyt.onrender.com/"
+    const url = "https://certificate-server-personal.onrender.com/"
+    // const url = "https://certificate-server-2qyt.onrender.com/"
     // const url = "http://127.0.0.1:8000/"
     // const url = "https://server.handiwork.com.ng/api/certificates/number/${certificateNumber}"
 
@@ -49,8 +50,10 @@ function LandingPage() {
         
         
     }catch(dupError) {
+       if(dupError){
         console.log("dupError:", dupError.response.data.message)
         setCertificateError(dupError.response.data.message)
+       }
     }finally{
       setLoading(false)
     }
@@ -115,15 +118,15 @@ const goBack = ()=>{
         
         
         <div className="left">
-            <img src={student && student.certificateImages[0]} alt="certificate" />
+            <img src={student && student.certificate} alt="certificate" />
         </div>
 
         <div className="right">
-            <div className="name">{student.name}</div>
+            <div className="name">{student && student.name}</div>
             
-            <p>Course: {student.course}</p>
-            <p>Cert No: {student.certificateNumber}</p>
-            <p>Issued Date: {student.issuedDate}</p>
+            <p>Course: {student && student.course}</p>
+            <p>Cert No: {student && student.certificateNumber}</p>
+            <p>Issued Date: {student && student.issuedDate}</p>
         </div>
       </div> : ""}
     </div>
